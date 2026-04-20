@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Immaculate Heart of Mary Academy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <div class="nav-brand">
+        <img src="assets/images/logo.png" alt="IHMA Logo" class="nav-logo">
+        <div class="brand-text">
+          <span class="brand-short">IHMA</span>
+          <span class="brand-motto">Veritas in Caritate</span>
+        </div>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#vision">Vision</a></li>
+        <li><a href="#mission">Mission</a></li>
+        <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#home" onclick="closeMobile()">Home</a></li>
+      <li><a href="#about" onclick="closeMobile()">About</a></li>
+      <li><a href="#vision" onclick="closeMobile()">Vision</a></li>
+      <li><a href="#mission" onclick="closeMobile()">Mission</a></li>
+      <li><a href="#contact" onclick="closeMobile()">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <img src="assets/images/background.png" alt="" class="hero-img">
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Est. Pinamalayan, Oriental Mindoro</p>
+      <h1 class="hero-title">Immaculate Heart<br><em>of Mary Academy</em></h1>
+      <p class="hero-sub">Forming hearts and minds for a life of truth, service, and excellence.</p>
+      <div class="hero-actions">
+        <a href="#about" class="btn-primary">Discover IHMA</a>
+        <a href="#contact" class="btn-ghost">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- Stats Strip -->
+  <div class="stats-strip">
+    <div class="stat-item">
+      <span class="stat-num">K–12</span>
+      <span class="stat-label">Curriculum</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-num">40+</span>
+      <span class="stat-label">Expert Educators</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-num">100%</span>
+      <span class="stat-label">Holistic Formation</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <span class="stat-num">Faith</span>
+      <span class="stat-label">Anchored Community</span>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-media">
+          <div class="media-stack">
+            <img src="assets/images/ihma.webp" alt="IHMA School" class="media-main">
+            
+          </div>
+        </div>
+        <div class="about-body">
+          <span class="eyebrow">About IHMA</span>
+          <h2>Best school to develop your child's <em>uniqueness</em></h2>
+          <p>IHMA is a dedicated learning institution committed to providing holistic formation and academic excellence. We believe that every student is unique, and to develop that uniqueness into bright outcomes, they need the best education.</p>
+          <p>With years of experience in providing quality education, we have nurtured students to become successful and happy individuals. We open doors to many prestigious higher education institutions.</p>
+          <div class="about-features">
+            <div class="feature">
+              <div class="feature-icon">🏆</div>
+              <div>
+                <strong>Academic Excellence</strong>
+                <p>Our PAASCU-accredited curriculum provides a high-standard education that opens doors to prestigious higher education institutions. We empower students through innovative, competitive, and globally recognized learning programs.
+</p>
+              </div>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">💙</div>
+              <div>
+                <strong> The Blue Identity</strong>
+                <p>Rooted in our devotion to the Immaculate Heart of Mary, we take pride in a tradition that fosters a strong sense of belonging. Our students carry a legacy of poise and excellence that is recognized throughout the community.</p>
+              </div>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">🔍</div>
+              <div>
+                <strong>Value-Based Discipline</strong>
+                <p>We believe in holistic growth where students are monitored closely and guided by Christian values. We maintain constant communication with parents to ensure students are nurtured into disciplined, successful, and happy individuals.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vision & Mission -->
+  <section class="vm-section">
+    <div class="container">
+      <div class="vm-grid">
+        <div class="vm-card" id="vision">
+          <div class="vm-num">01</div>
+          <h3>Vision</h3>
+          <p>A Marian educational institution committed to a holistic educational experience enabling and inspiring students to lead lives of choice, purpose and service.</p>
+        </div>
+        <div class="vm-card" id="mission">
+          <div class="vm-num">02</div>
+          <h3>Mission</h3>
+          <p>To create and maintain a student-centered learning environment where teaching and learning are purpose-driven and students are assisted towards the development of personal and social responsibility.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-left">
+          <span class="eyebrow light">Get in Touch</span>
+          <h2>We'd love to<br><em>hear from you</em></h2>
+          <p>Reach out to learn more about our programs, enrollment, or any questions about IHMA.</p>
+        </div>
+        <div class="contact-right">
+          <div class="contact-card">
+            <div class="contact-item">
+              <div class="contact-icon">📍</div>
+              <div>
+                <strong>Address</strong>
+                <p>Madrid Avenue, Pinamalayan, 5208 <br>Oriental Mindoro, Philippines.</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📞</div>
+              <div>
+                <strong>Phone</strong>
+                <p><a href="tel:+639311728677">(0931) 172-8677</a></p>
+                <p><a href="tel:+639275191413">(0927) 519-1413</a></p>  
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-left">
+        <img src="assets/images/logo.png" alt="IHMA" class="footer-logo">
+        <div>
+          <p class="footer-name">Immaculate Heart of Mary Academy</p>
+          <p class="footer-tagline">Veritas in Caritate</p>
+        </div>
+      </div>
+      <p class="footer-copy">© 2026 IHMA. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Sticky nav shadow
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    // Mobile menu
+    document.getElementById('hamburger').addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.toggle('open');
+      document.getElementById('hamburger').classList.toggle('active');
+    });
+
+    function closeMobile() {
+      document.getElementById('mobileMenu').classList.remove('open');
+      document.getElementById('hamburger').classList.remove('active');
+    }
+
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.about-grid, .vm-card, .stats-strip, .contact-grid');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); observer.unobserve(e.target); } });
+    }, { threshold: 0.15 });
+    reveals.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
