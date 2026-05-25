@@ -22,11 +22,11 @@
         </div>
       </div>
       <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#vision">Vision</a></li>
-        <li><a href="#mission">Mission</a></li>
-        <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+        <li><a href="/" data-route="home">Home</a></li>
+        <li><a href="/about" data-route="about">About</a></li>
+        <li><a href="/vision" data-route="vision">Vision</a></li>
+        <li><a href="/mission" data-route="mission">Mission</a></li>
+        <li><a href="/contact" class="nav-cta" data-route="contact">Contact Us</a></li>
       </ul>
       <button class="hamburger" id="hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -37,11 +37,11 @@
   <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobileMenu">
     <ul>
-      <li><a href="#home" onclick="closeMobile()">Home</a></li>
-      <li><a href="#about" onclick="closeMobile()">About</a></li>
-      <li><a href="#vision" onclick="closeMobile()">Vision</a></li>
-      <li><a href="#mission" onclick="closeMobile()">Mission</a></li>
-      <li><a href="#contact" onclick="closeMobile()">Contact</a></li>
+      <li><a href="/" data-route="home">Home</a></li>
+      <li><a href="/about" data-route="about">About</a></li>
+      <li><a href="/vision" data-route="vision">Vision</a></li>
+      <li><a href="/mission" data-route="mission">Mission</a></li>
+      <li><a href="/contact" data-route="contact">Contact</a></li>
     </ul>
   </div>
 
@@ -56,8 +56,8 @@
       <h1 class="hero-title">Immaculate Heart<br><em>of Mary Academy</em></h1>
       <p class="hero-sub">Forming hearts and minds for a life of truth, service, and excellence.</p>
       <div class="hero-actions">
-        <a href="#about" class="btn-primary">Discover IHMA</a>
-        <a href="#contact" class="btn-ghost">Get in Touch</a>
+        <a href="/about" class="btn-primary" data-route="about">Discover IHMA</a>
+        <a href="/contact" class="btn-ghost" data-route="contact">Get in Touch</a>
       </div>
     </div>
     <div class="hero-scroll">
@@ -198,6 +198,59 @@
   </footer>
 
   <script>
+    const sectionRoutes = {
+      home: 'home',
+      about: 'about',
+      vision: 'vision',
+      mission: 'mission',
+      contact: 'contact'
+    };
+
+    function navigateTo(route, replace = false) {
+      const targetId = sectionRoutes[route] || 'home';
+      const target = document.getElementById(targetId);
+
+      if (!target) {
+        return;
+      }
+
+      if (replace) {
+        history.replaceState({ route: targetId }, '', targetId === 'home' ? '/' : `/${targetId}`);
+      } else {
+        history.pushState({ route: targetId }, '', targetId === 'home' ? '/' : `/${targetId}`);
+      }
+
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    document.querySelectorAll('[data-route]').forEach((link) => {
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
+        closeMobile();
+        navigateTo(link.dataset.route);
+      });
+    });
+
+    window.addEventListener('popstate', () => {
+      const route = window.location.pathname.replace(/^\/+|\/+$/g, '') || 'home';
+      const targetId = sectionRoutes[route] || 'home';
+      const target = document.getElementById(targetId);
+
+      if (target) {
+        target.scrollIntoView({ behavior: 'auto', block: 'start' });
+      }
+    });
+
+    window.addEventListener('load', () => {
+      const route = window.location.pathname.replace(/^\/+|\/+$/g, '') || 'home';
+      const targetId = sectionRoutes[route] || 'home';
+      const target = document.getElementById(targetId);
+
+      if (target) {
+        target.scrollIntoView({ behavior: 'auto', block: 'start' });
+      }
+    });
+
     // Sticky nav shadow
     window.addEventListener('scroll', () => {
       document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 40);
